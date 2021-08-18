@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3.8
 
 # system imports
 
@@ -15,5 +15,6 @@ urlOpenssl = "https://services.nvd.nist.gov/rest/json/cves/1.0?keyword=openssl&p
 urlTuxedo = "https://services.nvd.nist.gov/rest/json/cves/1.0?keyword=tuxedo&pubStartDate=2021-02-10T00:00:00:000%20UTC-05:00"
 
 url = urlTuxedo
+url = urlOpenssl
 r = requests.get(url, verify='/etc/ssl/certs').json()
 print(json.dumps(r, indent=4))
