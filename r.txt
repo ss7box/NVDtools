@@ -1,3 +1,4 @@
+urlOpenssl = https://services.nvd.nist.gov/rest/json/cves/1.0?keyword=openssl&pubStartDate=2022-02-10T00:00:00:000%20UTC-05:00&pubEndDate=2022-02-17T00:00:00:000%20UTC-05:00
 Openssl results:
 {
     "resultsPerPage": 0,
@@ -7,20 +8,64 @@ Openssl results:
         "CVE_data_type": "CVE",
         "CVE_data_format": "MITRE",
         "CVE_data_version": "4.0",
-        "CVE_data_timestamp": "2021-09-23T13:46Z",
+        "CVE_data_timestamp": "2022-02-17T21:48Z",
         "CVE_Items": []
     }
 }
 Oracle Tuxedo results:
 {
-    "resultsPerPage": 0,
+    "resultsPerPage": 1,
     "startIndex": 0,
-    "totalResults": 0,
+    "totalResults": 1,
     "result": {
         "CVE_data_type": "CVE",
         "CVE_data_format": "MITRE",
         "CVE_data_version": "4.0",
-        "CVE_data_timestamp": "2021-09-23T13:46Z",
-        "CVE_Items": []
+        "CVE_data_timestamp": "2022-02-17T21:48Z",
+        "CVE_Items": [
+            {
+                "cve": {
+                    "data_type": "CVE",
+                    "data_format": "MITRE",
+                    "data_version": "4.0",
+                    "CVE_data_meta": {
+                        "ID": "CVE-2021-45346",
+                        "ASSIGNER": "cve@mitre.org"
+                    },
+                    "problemtype": {
+                        "problemtype_data": [
+                            {
+                                "description": []
+                            }
+                        ]
+                    },
+                    "references": {
+                        "reference_data": [
+                            {
+                                "url": "https://github.com/guyinatuxedo/sqlite3_record_leaking",
+                                "name": "https://github.com/guyinatuxedo/sqlite3_record_leaking",
+                                "refsource": "MISC",
+                                "tags": []
+                            }
+                        ]
+                    },
+                    "description": {
+                        "description_data": [
+                            {
+                                "lang": "en",
+                                "value": "A Memory Leak vulnerabilty exists in SQLite Project SQLite3 3.35.1 and 3.37.0 via maliciously crafted SQL Queries (made via editing the Database File), it is possible to query a record, and leak subsequent bytes of memory that extend beyond the record, which could let a malicous user obtain sensitive information.."
+                            }
+                        ]
+                    }
+                },
+                "configurations": {
+                    "CVE_data_version": "4.0",
+                    "nodes": []
+                },
+                "impact": {},
+                "publishedDate": "2022-02-14T19:15Z",
+                "lastModifiedDate": "2022-02-14T19:26Z"
+            }
+        ]
     }
 }
