@@ -1,9 +1,9 @@
 #!/bin/bash
 
 date
-startDate=2022-02-10
-endDate=2022-02-17
+startDate=2023-01-20
+endDate=2023-01-27
 result=r.txt
-./checkNVD.py $startDate $endDate > $result
+./r2.checkNVD.py $startDate $endDate > $result
 cat $result | grep ASSIGN
 cat $result | grep value
