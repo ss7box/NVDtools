@@ -1,9 +1,8 @@
 #!/bin/bash
 
 date
-startDate=2023-01-20
-endDate=2023-01-27
+startDate=2023-03-21
+endDate=2023-03-23
 result=r.txt
 ./r2.checkNVD.py $startDate $endDate > $result
-cat $result | grep ASSIGN
-cat $result | grep value
+cat $result | grep "vulnStatus\|ASSIGN\|value\|CVE-\|sourceIdentifier"

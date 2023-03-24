@@ -1,4 +1,4 @@
-urlOpenssl = https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=openssl&pubStartDate=2023-01-20T00:00:00.000&pubEndDate=2023-01-27T00:00:00.000
+urlOpenssl = https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=openssl&pubStartDate=2023-03-21T00:00:00.000&pubEndDate=2023-03-23T00:00:00.000
 Openssl results:
 {
     "resultsPerPage": 1,
@@ -6,65 +6,42 @@ Openssl results:
     "totalResults": 1,
     "format": "NVD_CVE",
     "version": "2.0",
-    "timestamp": "2023-01-27T18:41:57.213",
+    "timestamp": "2023-03-24T14:57:23.970",
     "vulnerabilities": [
         {
             "cve": {
-                "id": "CVE-2022-41141",
-                "sourceIdentifier": "zdi-disclosures@trendmicro.com",
-                "published": "2023-01-26T18:59:53.780",
-                "lastModified": "2023-01-26T21:16:18.227",
+                "id": "CVE-2023-0464",
+                "sourceIdentifier": "openssl-security@openssl.org",
+                "published": "2023-03-22T17:15:13.130",
+                "lastModified": "2023-03-22T18:10:33.697",
                 "vulnStatus": "Awaiting Analysis",
                 "descriptions": [
                     {
                         "lang": "en",
-                        "value": "This vulnerability allows local attackers to escalate privileges on affected installations of Windscribe. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The specific flaw exists within the configuration of OpenSSL. The product loads an OpenSSL configuration file from an unsecured location. An attacker can leverage this vulnerability to escalate privileges and execute arbitrary code in the context of SYSTEM. Was ZDI-CAN-16859."
+                        "value": "A security vulnerability has been identified in all supported versions of OpenSSL related to the verification of X.509 certificate chains that include policy constraints. Attackers may be able to exploit this vulnerability by creating a malicious certificate chain that triggers exponential use of computational resources, leading to a denial-of-service (DoS) attack on affected systems. Policy processing is disabled by default but can be enabled by passing the `-policy' argument to the command line utilities or by calling the `X509_VERIFY_PARAM_set1_policies()' function."
                     }
                 ],
-                "metrics": {
-                    "cvssMetricV30": [
-                        {
-                            "source": "zdi-disclosures@trendmicro.com",
-                            "type": "Secondary",
-                            "cvssData": {
-                                "version": "3.0",
-                                "vectorString": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-                                "attackVector": "LOCAL",
-                                "attackComplexity": "LOW",
-                                "privilegesRequired": "LOW",
-                                "userInteraction": "NONE",
-                                "scope": "UNCHANGED",
-                                "confidentialityImpact": "HIGH",
-                                "integrityImpact": "HIGH",
-                                "availabilityImpact": "HIGH",
-                                "baseScore": 7.8,
-                                "baseSeverity": "HIGH"
-                            },
-                            "exploitabilityScore": 1.8,
-                            "impactScore": 5.9
-                        }
-                    ]
-                },
-                "weaknesses": [
-                    {
-                        "source": "zdi-disclosures@trendmicro.com",
-                        "type": "Secondary",
-                        "description": [
-                            {
-                                "lang": "en",
-                                "value": "CWE-427"
-                            }
-                        ]
-                    }
-                ],
+                "metrics": {},
                 "references": [
                     {
-                        "url": "https://windscribe.com/changelog/windows",
-                        "source": "zdi-disclosures@trendmicro.com"
+                        "url": "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2017771e2db3e2b96f89bbe8766c3209f6a99545",
+                        "source": "openssl-security@openssl.org"
                     },
                     {
-                        "url": "https://www.zerodayinitiative.com/advisories/ZDI-22-1300/",
-                        "source": "zdi-disclosures@trendmicro.com"
+                        "url": "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2dcd4f1e3115f38cefa43e3efbe9b801c27e642e",
+                        "source": "openssl-security@openssl.org"
+                    },
+                    {
+                        "url": "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=879f7080d7e141f415c79eaa3a8ac4a3dad0348b",
+                        "source": "openssl-security@openssl.org"
+                    },
+                    {
+                        "url": "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=959c59c7a0164117e7f8366466a32bb1f8d77ff1",
+                        "source": "openssl-security@openssl.org"
+                    },
+                    {
+                        "url": "https://www.openssl.org/news/secadv/20230322.txt",
+                        "source": "openssl-security@openssl.org"
                     }
                 ]
             }
@@ -78,6 +55,6 @@ Oracle Tuxedo results:
     "totalResults": 0,
     "format": "NVD_CVE",
     "version": "2.0",
-    "timestamp": "2023-01-27T18:41:59.740",
+    "timestamp": "2023-03-24T14:57:28.263",
     "vulnerabilities": []
 }
